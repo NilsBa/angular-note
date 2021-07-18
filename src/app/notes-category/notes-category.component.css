@@ -1,8 +1,10 @@
 .category {
     background-color: rgb(235, 235, 235);
-    margin: 0 10px 0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 0 1px;
+    display: block;
     min-width: 200px;
-    max-width: 300px;
+    max-width: 750px;
     color: black;
 }

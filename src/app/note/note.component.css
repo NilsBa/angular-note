@@ -2,4 +2,11 @@
     background-color: yellow;
     margin: 7px;
     color: black;
+    
 }
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+

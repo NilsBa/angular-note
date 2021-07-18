@@ -1,18 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Note } from './note';
 import { NOTES } from './mock-notes';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NotesService {
+
+  noteAddSubscription = new Subject();
+
   notes: Note[] = NOTES;
   noteID = this.notes.length - 1;
+  //selectedNote: Note = this.notes[0];
 
-  addToNotes(noteText : string){
-    this.noteID++;
-    var noteToPush : Note = { id: this.noteID, text: noteText, isFinished: false};
-    this.notes.push(noteToPush);
+  constructor() { }
+
+  noteAddHandler(noteText: string){
+    let newNote:Note = {id: this.getNewNoteID(), text: noteText, isFinished: false};
+    this.noteAddSubscription.next({newNote});
+  }
+
+  getNewNoteID(){
+    this.noteID = this.notes.length;
+    return this.noteID;
   }
 
   getNotes(){
@@ -27,6 +38,4 @@ export class NotesService {
     let noteIndex = this.notes.findIndex(n => n.id === note.id);
     return noteIndex;
   }
-
-  constructor() { }
 }

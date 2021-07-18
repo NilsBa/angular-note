@@ -1,6 +1,11 @@
 <mat-card class="note">
-    <div *ngIf="note">
-        {{note.text}}
-       
+    <div *ngIf="note" class = "wrapper">
+        <span class = "delete-and-text" (click) = "deleteNoteHandler()"  [(ngModel)] = "note"> <!--[class.selected] = "note" -->
+            <mat-icon class = "delete-button">delete</mat-icon>
+            {{note.text}}
+        </span>
+        <mat-icon class = "finish-button">done</mat-icon>
     </div>
 </mat-card>
+<!--[class.selected] ="hero === selectedHero"
+    (click)="onSelect(hero)">-->

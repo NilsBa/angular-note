@@ -1,5 +1,7 @@
 <div class="category">
     <h3>Notes</h3>
-    <app-note class="notes" *ngFor="let note of notes" [note]="note">
+    <app-note class="notes" *ngFor="let note of notes" [note]="note"
+    [class.selected] ="note === selectedNote" (click)="onSelect(note)"> 
+        <!--[class.selected] ="note === selectedNote" (click)="onSelect(note)"-->
     </app-note>
 </div>
