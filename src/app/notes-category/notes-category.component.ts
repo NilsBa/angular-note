@@ -17,21 +17,7 @@ export class NotesCategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.notesService.noteAddSubscription.subscribe((text : any) =>{
-      this.notes.unshift(text
-        /*
-        {
-          id: text.id,
-          text: text.text,
-          isFinished: text.isFinished
-        } 
-        */
-      )
+      this.notes.unshift(text)
     }); 
   }
-
-  onSelect(note: Note): void{
-    this.selectedNote = note;
-    console.log(this.selectedNote);
-  }
-
 }
