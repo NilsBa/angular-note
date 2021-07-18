@@ -1,8 +1,10 @@
 <h1>{{title}}</h1>
-<div  class = "add-note" ><!--*ngIf="note"-->
+<div  class = "add-note" >
     <input class = "add-textfield" [(ngModel)] = "noteText">
     <button class = "add-button" (click) = "addNoteHandler()">
         Add Note
     </button>
 </div>
 <app-notes-category></app-notes-category>
+
+<!--*ngIf="note"-->

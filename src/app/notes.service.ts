@@ -18,7 +18,7 @@ export class NotesService {
 
   noteAddHandler(noteText: string){
     let newNote:Note = {id: this.getNewNoteID(), text: noteText, isFinished: false};
-    this.noteAddSubscription.next({newNote});
+    this.noteAddSubscription.next({noteText});
   }
 
   getNewNoteID(){
