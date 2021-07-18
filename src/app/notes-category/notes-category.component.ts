@@ -17,11 +17,15 @@ export class NotesCategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.notesService.noteAddSubscription.subscribe((text : any) =>{
-      this.notes.unshift({
-          id: 100,
-          text: text.noteText,
-          isFinished: false
-        })
+      this.notes.unshift(text
+        /*
+        {
+          id: text.id,
+          text: text.text,
+          isFinished: text.isFinished
+        } 
+        */
+      )
     }); 
   }
 

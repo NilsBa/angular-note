@@ -1,7 +1,7 @@
 <mat-card class="note">
     <div *ngIf="note" class = "wrapper">
-        <span class = "delete-and-text" (click) = "deleteNoteHandler()"> <!--[(ngModel)] = "note"--> 
-            <mat-icon class = "delete-button">delete</mat-icon>
+        <span class = "delete-and-text" > <!--[(ngModel)] = "note"--> 
+            <mat-icon class = "delete-button" (click) = "deleteNoteHandler()">delete</mat-icon>
             {{note.text}}
         </span>
         <mat-icon class = "finish-button">done</mat-icon>

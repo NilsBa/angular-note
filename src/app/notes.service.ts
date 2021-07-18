@@ -17,8 +17,9 @@ export class NotesService {
   constructor() { }
 
   noteAddHandler(noteText: string){
-    let newNote:Note = {id: this.getNewNoteID(), text: noteText, isFinished: false};
-    this.noteAddSubscription.next({noteText});
+    let note = {id: this.getNewNoteID(), text: noteText, isFinished: false};
+    console.log(note);
+    this.noteAddSubscription.next(note);
   }
 
   getNewNoteID(){
