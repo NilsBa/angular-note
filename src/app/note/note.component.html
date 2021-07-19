@@ -1,9 +1,15 @@
 <mat-card class="note">
     <div *ngIf="note" class = "wrapper">
-        <span class = "delete-and-text" >
+        <div class = "delete-and-text" >
             <mat-icon class = "delete-button" (click) = "deleteNoteHandler()">delete</mat-icon>
-            {{note.text}}
-        </span>
-        <mat-icon class = "finish-button">done</mat-icon>
+            <div class  = "note-text">
+                <div  *ngIf="!note.isFinished" class  = "note-text-not-finished">{{note.text}}</div>
+                <div  *ngIf="note.isFinished" class  = "note-text-is-finished">{{note.text}}</div>
+            </div>
+        </div>
+        <div class = "check-button">
+            <mat-icon *ngIf="!note.isFinished" class = "check-button-unchecked" (click) = "checkNoteHandler()">task_alt</mat-icon>
+            <mat-icon *ngIf="note.isFinished" class = "check-button-checked" (click) = "checkNoteHandler()">task_alt</mat-icon>
+        </div>
     </div>
 </mat-card>

@@ -1,7 +1,9 @@
-<h1>{{title}}</h1>
-<div  class = "add-note" >
-    <input class = "add-textfield" [(ngModel)] = "noteText">
-    <button class = "add-button" (click) = "addNoteHandler()">
-        Add Note
-    </button>
+<div class = "header">
+    <h1>{{title}}</h1>
+    <div class="add-note">
+        <input class="add-textfield"  maxlength="65" [(ngModel)]="noteText">
+        <button class="add-button" (click)="addNoteHandler()">
+            Add Note
+        </button>
+    </div>
 </div>

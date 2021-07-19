@@ -1,8 +1,8 @@
 .category {
-    background-color: rgb(235, 235, 235);
+    /*background-color: rgb(235, 235, 235);*/
     margin-left: auto;
     margin-right: auto;
-    padding: 0 0 1px;
+    padding: 20px 0 1px;
     display: block;
     min-width: 200px;
     max-width: 750px;

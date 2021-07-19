@@ -18,6 +18,8 @@ export class NoteComponent implements OnInit {
   deleteNoteHandler(){
     this.noteService.deleteNote(this.note || this.noteTest);
   }
-  
 
+  checkNoteHandler(){
+    this.noteService.checkNote(this.note || this.noteTest);
+  }
 }

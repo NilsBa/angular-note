@@ -1,6 +1,6 @@
 .note {
     background-color: yellow;
-    margin: 7px;
+    margin: 10px 0px;
     color: black;
     
 }
@@ -8,5 +8,48 @@
 .wrapper{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
+}
+
+.delete-and-text{
+    display: flex;
+    align-items: center;
+}
+
+.note-text{
+    padding-left: 10px;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.note-text-not-finished{
+    text-decoration: none;
+}
+
+.note-text-is-finished{
+    text-decoration: line-through;
+}
+
+.delete-button{
+    color: black;
+    opacity: 0.7;
+}
+
+.delete-button:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.check-button{
+    cursor: pointer;
+}
+
+.check-button-unchecked{
+    color: black;
+}
+
+.check-button-checked{
+    color: green;
 }
 

@@ -12,7 +12,6 @@ export class NotesService {
 
   notes: Note[] = NOTES;
   noteID = this.notes.length - 1;
-  //selectedNote: Note = this.notes[0];
 
   constructor() { }
 
@@ -38,5 +37,10 @@ export class NotesService {
   findNote(note: Note){
     let noteIndex = this.notes.findIndex(n => n.id === note.id);
     return noteIndex;
+  }
+
+  checkNote(note: Note){
+    let index = this.findNote(note);
+    this.notes[index].isFinished = !this.notes[index].isFinished
   }
 }
